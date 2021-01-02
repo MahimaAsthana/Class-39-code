@@ -1,7 +1,7 @@
 class Form {
 
   constructor() {
-    this.input = createInput();
+    this.input = createInput("").attribute("placeholder", "Name");
     this.button = createButton('Play');
     this.greeting = createElement('h2');
     this.title = createElement('h2');
@@ -34,7 +34,7 @@ class Form {
       this.greeting.position(displayWidth/2 - 70, displayHeight/4);
     });
 
-    this.reset.mousePressed(()=>{
+    this.reset.mousePressed(()=>{ // Arrow Function
       player.updateCount(0);
       game.update(0);
     });
