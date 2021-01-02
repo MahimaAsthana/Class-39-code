@@ -17,7 +17,7 @@ class Game {
     });
   }
 
-  async start(){
+  async start(){  // Asynchronous function
     if(gameState === 0){
       player = new Player();
       var playerCountRef = await database.ref('playerCount').once("value");
@@ -25,7 +25,7 @@ class Game {
         playerCount = playerCountRef.val();
         player.getCount();
       }
-      form = new Form()
+      form = new Form();
       form.display();
     }
 
@@ -43,7 +43,7 @@ class Game {
   play(){
     form.hide();
     
-    Player.getPlayerInfo();
+    Player.getPlayerInfo();  // Static function are called by class not by objects
     
     if(allPlayers !== undefined){
       background(rgb(198,135,103));

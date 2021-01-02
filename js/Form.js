@@ -37,6 +37,10 @@ class Form {
     this.reset.mousePressed(()=>{ // Arrow Function
       player.updateCount(0);
       game.update(0);
+
+      database.ref('/').update({
+        players: null,
+      })
     });
 
   }

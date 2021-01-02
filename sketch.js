@@ -24,8 +24,8 @@ function preload(){
 function setup(){
   canvas = createCanvas(displayWidth - 20, displayHeight-30);
   database = firebase.database();
-  game = new Game();
-  game.getState();
+  game = new Game(); // Object of class Game
+  game.getState(); // Function of Game class called by object of that class
   game.start();
 }
 
@@ -42,3 +42,7 @@ function draw(){
     game.end();
   }
 }
+/* 
+1. = is assignment operator  === is comparsion operator
+
+*/
